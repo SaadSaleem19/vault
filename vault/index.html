@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="VAULT — Premium footwear brand. Shop exclusive black & white sneakers crafted for those who move differently." />
+    <title>VAULT — Step Into the Vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <div class="loader" id="loader">
+        <div class="loader-logo">
+            <img src="images/vault_logo.png" alt="vault" class="loader-logo-img" />
+        </div>
+        <div class="loader-bar">
+            <div class="loader-fill" id="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-logo" aria-label="vault">
+            <img src="images/vault_logo.png" alt="vault" class="nav-logo-img" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home" id="nav-home">Home</a></li>
+            <li><a href="#collection" id="nav-collection">Collection</a></li>
+            <li><a href="#products" id="nav-products">Shop</a></li>
+            <li><a href="#about" id="nav-about">About</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="nav-cart" id="cart-btn" aria-label="Cart">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#collection" class="mobile-link">Collection</a></li>
+            <li><a href="#products" class="mobile-link">Shop</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="cart-empty">
+                <div class="cart-empty-icon">🛒</div>
+                <p>Your vault is empty</p>
+                <span>Add some kicks first</span>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display:none">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">PKR 0</span>
+            </div>
+            <button class="btn-checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg-text" aria-hidden="true">
+            <img src="images/vault_logo.png" alt="vault" class="hero-bg-logo-img" />
+        </div>
+        <div class="hero-content">
+            <div class="hero-tag reveal-left">— New Drop 2025</div>
+            <h1 class="hero-title reveal-up">
+                Step Into<br /><span class="hero-accent">the vault.</span>
+            </h1>
+            <p class="hero-sub reveal-up delay-1">Where silence meets swagger. Premium footwear<br />crafted for the
+                ones who move differently.</p>
+            <div class="hero-cta reveal-up delay-2">
+                <a href="#products" class="btn-primary" id="hero-shop-btn">Shop Now</a>
+                <a href="#collection" class="btn-ghost" id="hero-explore-btn">Explore</a>
+            </div>
+        </div>
+        <div class="hero-image reveal-right">
+            <div class="hero-img-glow"></div>
+            <img src="images/hero_shoe.png" alt="Vault Hero Sneaker" />
+        </div>
+        <div class="hero-scroll-hint">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span>VAULT &nbsp;●&nbsp; PREMIUM FOOTWEAR &nbsp;●&nbsp; CRAFTED DIFFERENT &nbsp;●&nbsp; STEP UP
+                &nbsp;●&nbsp; VAULT &nbsp;●&nbsp; PREMIUM FOOTWEAR &nbsp;●&nbsp; CRAFTED DIFFERENT &nbsp;●&nbsp; STEP UP
+                &nbsp;●&nbsp; VAULT &nbsp;●&nbsp; PREMIUM FOOTWEAR &nbsp;●&nbsp; CRAFTED DIFFERENT &nbsp;●&nbsp; STEP UP
+                &nbsp;●&nbsp;</span>
+        </div>
+    </div>
+
+    <!-- COLLECTION SECTION -->
+    <section class="collection-section" id="collection">
+        <div class="section-label scroll-reveal">The Collection</div>
+        <div class="collection-grid">
+            <div class="collection-main scroll-reveal">
+                <img src="images/collection_shoes.png" alt="Vault Collection" />
+                <div class="collection-badge">SS 2025</div>
+            </div>
+            <div class="collection-right">
+                <div class="collection-text scroll-reveal delay-1">
+                    <h2>Born in<br /><em>Darkness.</em><br />Refined in Light.</h2>
+                    <p>Each pair in the Vault collection is built with obsessive attention to detail. From grain-perfect
+                        leather to hand-stitched soles — we don't cut corners, we cut silhouettes.</p>
+                    <a href="#products" class="btn-primary mt" id="collection-shop-btn">Shop Collection</a>
+                </div>
+                <div class="collection-stats scroll-reveal delay-2">
+                    <div class="stat">
+                        <span class="stat-num" data-target="3">0</span>
+                        <span class="stat-label">Silhouettes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" data-target="100">0</span>
+                        <span class="stat-label">% Premium</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" data-target="1">0</span>
+                        <span class="stat-label">Brand. One Vision.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section" id="products">
+        <div class="section-label scroll-reveal">Shop</div>
+        <h2 class="section-title scroll-reveal">Pick Your Pair.</h2>
+        <div class="products-grid">
+
+            <div class="product-card scroll-reveal" data-id="1" data-name="Vault Ghost High" data-price="24999">
+                <div class="product-img-wrap">
+                    <img src="images/shoe_1.png" alt="Vault Ghost High" />
+                    <div class="product-overlay">
+                        <button class="btn-addcart" data-id="1" data-name="Vault Ghost High" data-price="24999">Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-top">
+                        <h3 class="product-name">Vault Ghost High</h3>
+                        <span class="product-tag">High-Top</span>
+                    </div>
+                    <div class="product-bottom">
+                        <span class="product-price">PKR 24,999</span>
+                        <div class="product-color-dots">
+                            <span class="dot white active"></span>
+                            <span class="dot black"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card scroll-reveal delay-1" data-id="2" data-name="Vault Shadow Low" data-price="19999">
+                <div class="product-img-wrap" style="background:#fff;">
+                    <img src="images/shoe_2.png" alt="Vault Shadow Low" />
+                    <div class="product-overlay">
+                        <button class="btn-addcart" data-id="2" data-name="Vault Shadow Low" data-price="19999">Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-top">
+                        <h3 class="product-name">Vault Shadow Low</h3>
+                        <span class="product-tag">Low-Top</span>
+                    </div>
+                    <div class="product-bottom">
+                        <span class="product-price">PKR 19,999</span>
+                        <div class="product-color-dots">
+                            <span class="dot black active"></span>
+                            <span class="dot white"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card scroll-reveal delay-2" data-id="3" data-name="Vault Phantom Runner"
+                data-price="17499">
+                <div class="product-img-wrap">
+                    <img src="images/shoe_3.png" alt="Vault Phantom Runner" />
+                    <div class="product-overlay">
+                        <button class="btn-addcart" data-id="3" data-name="Vault Phantom Runner" data-price="17499">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-top">
+                        <h3 class="product-name">Vault Phantom Runner</h3>
+                        <span class="product-tag">Runner</span>
+                    </div>
+                    <div class="product-bottom">
+                        <span class="product-price">PKR 17,499</span>
+                        <div class="product-color-dots">
+                            <span class="dot white active"></span>
+                            <span class="dot black"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURE SECTION -->
+    <section class="features-section">
+        <div class="features-grid">
+            <div class="feature-item scroll-reveal">
+                <div class="feature-icon">◈</div>
+                <h4>Premium Leather</h4>
+                <p>Full-grain Italian leather upper on every silhouette.</p>
+            </div>
+            <div class="feature-item scroll-reveal delay-1">
+                <div class="feature-icon">◈</div>
+                <h4>Handcrafted Soles</h4>
+                <p>Every pair stitched by hand for a perfect finish.</p>
+            </div>
+            <div class="feature-item scroll-reveal delay-2">
+                <div class="feature-icon">◈</div>
+                <h4>Limited Drops</h4>
+                <p>Exclusive releases — once gone, they're gone.</p>
+            </div>
+            <div class="feature-item scroll-reveal delay-3">
+                <div class="feature-icon">◈</div>
+                <h4>Free Shipping</h4>
+                <p>Free delivery across Pakistan on all orders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+        <div class="about-left scroll-reveal">
+            <div class="about-img-wrap">
+                <img src="images/hero_shoe.png" alt="About Vault" />
+                <div class="about-badge scroll-reveal delay-1">Est. 2025</div>
+            </div>
+        </div>
+        <div class="about-right scroll-reveal delay-1">
+            <div class="section-label">Our Story</div>
+            <h2>We Built a<br /><em>Vault</em>,<br />So You Don't Have to Settle.</h2>
+            <p>VAULT started with one belief: you deserve footwear that doesn't ask for attention — it commands it. Born
+                from the streets of Pakistan, built for the world. No filler. No fluff. Just clean lines and clean
+                drops.</p>
+            <p>Every shoe is a statement. And every statement matters.</p>
+            <div class="about-socials">
+                <a href="#" class="social-link" id="ig-link">Instagram</a>
+                <a href="#" class="social-link" id="tt-link">TikTok</a>
+                <a href="#" class="social-link" id="wa-link">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo" aria-label="vault">
+                    <img src="images/vault_logo_white.png" alt="vault" class="footer-logo-img" />
+                </a>
+                <p>Premium footwear. Exclusive drops.<br />Pakistan's finest.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h5>Join the Vault</h5>
+                <p>Get early drop access & exclusive deals.</p>
+                <div class="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="your@email.com" />
+                    <button id="newsletter-btn">→</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 VAULT. All rights reserved.</span>
+            <span>Made in Pakistan 🇵🇰</span>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
